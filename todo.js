@@ -48,7 +48,7 @@ function deleteTodo(e){
     if (e.target.className === "fa fa-remove"){
         e.target.parentElement.parentElement.remove();
         deleteTodoFromStorage(e.target.parentElement.parentElement.textContent);
-        showAlert("success","Todo Başarıyla Silindi.");
+        showAlert("success","Todo Successfully Deleted.");
     }
 }
 
@@ -80,12 +80,12 @@ function addTodo(e){
 
     
     if (newTodo === ""){
-        showAlert("danger","Lütfen Bir Veri Girin!");
+        showAlert("danger","Please Enter a Data!");
     }
     else{
         addTodoToUI(newTodo);
         addTodoToStorage(newTodo);
-        showAlert("success","Veri Başarı İle Eklendi.")
+        showAlert("success","Data Added Successfully.")
     }
     
     // addTodoToUI(newTodo);
